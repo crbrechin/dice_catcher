@@ -1,5 +1,6 @@
 extends Node2D
 
+#@export var new_die: PackedScene # DEBUG: Does not work for some reason
 @export var new_die: PackedScene = preload("res://Scenes/Game/Dice.tscn")
 
 # Called when the node enters the scene tree for the first time.
