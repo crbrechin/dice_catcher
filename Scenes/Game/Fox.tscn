@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b7vpe0y0gpdbr"]
+
+[ext_resource type="Script" uid="uid://ci5ywxebbfig7" path="res://Scenes/Game/Fox.gd" id="1_1l48q"]
+[ext_resource type="Texture2D" uid="uid://b70pwm3qu8mc7" path="res://Assets/Fox.png" id="1_ru8ne"]
+[ext_resource type="AudioStream" uid="uid://d21spyl8lno7y" path="res://Assets/eating.wav" id="3_uoqlp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ln2h6"]
+size = Vector2(110, 50)
+
+[node name="Fox" type="Area2D" unique_id=210711507]
+script = ExtResource("1_1l48q")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1099016899]
+texture = ExtResource("1_ru8ne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1701560100]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_ln2h6")
+
+[node name="Scores" type="AudioStreamPlayer2D" parent="." unique_id=1815824742]
+stream = ExtResource("3_uoqlp")
